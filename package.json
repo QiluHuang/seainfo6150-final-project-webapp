@@ -1,10 +1,16 @@
 {
   "name": "seainfo6150-webapp",
-  "homepage": "https://aprilbingham-neu.github.io/seainfo6150-final-project-webapp",
+  "homepage": "https://QiluHuang.github.io/seainfo6150-final-project-webapp",
   "version": "0.1.0",
   "private": true,
   "proxy": "https://validator.w3.org/",
   "dependencies": {
+    "@fortawesome/fontawesome-free-solid": "^5.0.13",
+    "@fortawesome/fontawesome-svg-core": "^1.2.32",
+    "@fortawesome/free-brands-svg-icons": "^5.15.1",
+    "@fortawesome/free-regular-svg-icons": "^5.15.1",
+    "@fortawesome/free-solid-svg-icons": "^5.15.1",
+    "@fortawesome/react-fontawesome": "^0.1.13",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-router-dom": "5.2.0",

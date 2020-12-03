@@ -1,0 +1,10 @@
+.image {
+    width: 100%;
+    height: auto;
+    /* vertical-align: middle; */
+}
+
+.imgContainer {
+    text-align: center;
+    vertical-align: middle;
+}

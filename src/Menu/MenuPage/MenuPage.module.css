@@ -1,0 +1,10 @@
+.sidebar{
+    display: inline-block;
+    position: relative;
+}
+
+.list {
+    display: inline-block;
+    position: relative;
+    
+}

@@ -1,13 +1,13 @@
-import React from 'react'
-import Form from "../Form/Form";
+import React, { useState } from 'react'
+import Slider from '../Slider/Slider.jsx';
 
 const Home = () => {
-    return (
-        <div>
-            Uncle Wong's
-            <h1>I changed this homepage</h1>
-        </div>
-    )
+  const [isTextShowing, setIsTextShowing] = useState(false);
+
+  function onClick() {
+    setIsTextShowing(!isTextShowing);
+  }
+    return <Slider />
 }
 
 export default Home

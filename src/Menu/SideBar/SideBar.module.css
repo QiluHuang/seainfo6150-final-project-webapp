@@ -1,0 +1,25 @@
+.sidenav_ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: rgb(127, 127, 127);
+}
+
+.sidenav_li {
+    /* float: left; */
+    width: 250px;
+    font-size: 1.5em;
+}
+  
+.sidenav_li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+  
+.sidenav_li a:hover:not(.active) {
+    background-color: rgb(64, 209, 84);
+}

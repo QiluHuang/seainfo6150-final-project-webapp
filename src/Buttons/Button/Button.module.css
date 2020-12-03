@@ -1,0 +1,45 @@
+.button {
+    background: #c00;
+    border-radius: 10px;
+    color: #fff;
+    padding: 10px;
+}
+
+
+
+
+  
+  @media (max-width: 768px) {
+    .button {
+        height: 25px;
+        border-radius: 7px;
+        padding: 7px;
+        font-size: 0.4rem;
+        text-align: center;
+        line-height: 5px;
+    }
+  }
+  
+  @media (min-width: 768px) and (max-width: 1390px) {
+    .button {
+        font-size: 0.6rem;
+    }
+  }
+
+  @media (min-width: 1390px) and (max-width: 1500px) {
+    .button {
+        font-size: 0.9rem;
+    }
+  }
+
+  @media (min-width: 1500px) and (max-width: 1619px) {
+    .button {
+        font-size: 1rem;
+    }
+  }
+
+  @media (min-width: 1619px) {
+    .button {
+        font-size: 1.1rem;
+    }
+  }

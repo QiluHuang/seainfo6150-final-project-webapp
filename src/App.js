@@ -1,13 +1,15 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Switch, Route, Link } from "react-router-dom";
+import { isEmpty } from "lodash";
 
 import Logo from "./Header/Logo/Logo.jsx";
 import Home from "./Home/Home.jsx";
-import Foo from "./Foo/Foo.jsx";
+import DishList from "./Menu/MenuList/MenuList.jsx";
 import Bar from "./Bar/Bar.jsx";
 import Baz from "./Baz/Baz.jsx";
 import Error from "./Error/Error.jsx";
-import Header from "./Header/Header.jsx";
+import Header from "./Header/Header/Header.jsx";
+import MenuPage from './Menu/MenuPage/MenuPage.jsx'
 
 // here is some external content. look at the /baz route below
 // to see how this content is passed down to the components via props
@@ -19,36 +21,11 @@ const externalContent = {
 };
 
 function App() {
+
   return (
+    // console.log(fetchedData),
     <>
     <Header />
-
-      {/* A <Switch> looks through its children <Route>s and
-            renders the first one that matches the current URL. */}
-      <div></div>
-      <Switch>
-        <Route path="/" exact component={Home} />
-        <Route path="/menu" exact component={Foo} />
-        {/* passing parameters via a route path */}
-        <Route
-          path="/bar/:categoryId/:productId"
-          exact
-          render={({ match }) => (
-            // getting the parameters from the url and passing
-            // down to the component as props
-            <Bar
-              categoryId={match.params.categoryId}
-              productId={match.params.productId}
-            />
-          )}
-        />
-        <Route
-          path="/baz"
-          exact
-          render={() => <Baz content={externalContent} />}
-        />
-        <Route component={Error} />
-      </Switch>
     </>
   );
 }
