@@ -9,6 +9,8 @@ import Home from './views/Home/Home.jsx';
 import Menu from './views/Menu/Menu.jsx';
 import About from "./views/About/About.jsx";
 import Error from "./Error/Error.jsx";
+import Cart from "./views/Cart/Cart";
+import Checkout from "./views/Checkout/Checkout";
 
 
 // here is some external content. look at the /baz route below
@@ -36,7 +38,7 @@ function App() {
                 <li className="topnav_li"><Link to="/">Home</Link></li>
                 <li className="topnav_li"><Link to="/menu">Menu</Link></li>
                 <li className="topnav_li"><Link to="/about">About</Link></li>
-                <li className="topnav_right"><Link to="/baz"><i class="fa fa-shopping-cart" aria-hidden="true"></i> Cart</Link></li>
+                <li className="topnav_right"><Link to="/cart"><i class="fa fa-shopping-cart" aria-hidden="true"></i> Cart</Link></li>
             </ul>
             
 
@@ -48,6 +50,9 @@ function App() {
           <Route path="/" exact component={Home} />
           <Route path="/menu" component={Menu} />
           <Route path="/about" component={About} />
+          <Route path="/cart" component={Cart} />
+          <Route path="/checkout" component={Checkout} />
+
           {/* <Redirect to="/homepage" /> */}
               
           <Route component={Error} />

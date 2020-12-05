@@ -1,0 +1,12 @@
+.wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.upper_image {
+    width: 200px;
+    height: auto;
+    text-align: center;
+    padding: 10px;
+}

@@ -1,0 +1,70 @@
+.cart_container {
+    margin: 40px;
+}
+
+.title_row {
+    display: flex;
+    justify-content: space-between;
+}
+
+.container {
+    width: auto;
+    height: 100%;
+  }
+  
+.container a {
+  text-decoration: none;
+}
+
+.container:hover {
+  box-shadow: 0 5px 10px 5px rgba(0, 0, 0, 0.2);
+  border-radius: 15px;
+}
+
+  
+.wrapper {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-left: 0px;
+  text-align: center;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+
+}
+ 
+  
+.upper_image {
+    text-align: center;
+    padding: 10px;
+    /* padding-top: 10px;
+    padding-bottom: 10px; */
+}
+
+
+.name {
+    font-size: 1em;
+    text-align: center;
+    color: black;
+}
+
+
+  
+.text {
+    font-size: 0.7em;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.price {
+  font-size: 1.2em;
+}
+
+
+.total_row {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+
+
