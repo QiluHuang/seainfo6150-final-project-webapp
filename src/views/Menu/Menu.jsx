@@ -1,0 +1,133 @@
+import React, { useEffect, useState } from 'react';
+import { Switch, Route, Link, NavLink, useRouteMatch, Redirect } from "react-router-dom";
+import styles from './Menu.module.css';
+
+import Poultry from '../Category/Poultry/Poultry.jsx';
+import Pork from '../Category/Pork/Pork.jsx';
+import Soup from '../Category/Soup/Soup.jsx';
+import Beef from '../Category/Beef/Beef.jsx';
+import Seafood from '../Category/Seafood/Seafood.jsx';
+import FriedRice from '../Category/FriedRice/FriedRice.jsx';
+import Vegetable from '../Category/Vegetable/Vegetable.jsx';
+import Beverages from '../Category/Beverages/Beverages.jsx';
+import MenuList from './MenuList.jsx';
+import DishDetail from '../DishDetail/DishDetail.jsx';
+
+
+
+const Menu = () => {
+    const [fetchedData, setFetchedData] = useState([]);
+
+    useEffect(() => {
+      const fetchData = async () => {
+        // performs a GET request
+        const response = await fetch("https://demo1273150.mockable.io/menu");
+        const responseJson = await response.json();
+        setFetchedData(Object.values(responseJson));
+      };
+  
+      if (!fetchedData.length) {
+        fetchData();
+      }
+    }, [fetchedData]);
+  
+    let displayContent;
+  
+    if (fetchedData.length) {
+      console.log(typeof fetchedData);
+      console.log(fetchedData);
+
+
+      displayContent = (
+        <div className={styles.menu_row}>
+            
+            <div className={styles.menu_sidebar}>
+                
+                <ul className={styles.menu_sidebar_ul}>
+                    <li className={styles.menu_sidebar_li}>                        
+                        <NavLink to="/menu/content" activeClassName={styles.activeClassName}><h4>Content</h4></NavLink>
+                    </li>
+                    <li className={styles.menu_sidebar_li}>
+                        <NavLink to={`/menu/${fetchedData[0].categoryID}`} activeClassName={styles.activeClassName}>
+                            <div><h4>{fetchedData[0].category}</h4></div>
+                        </NavLink>
+                    </li>
+                    <li className={styles.menu_sidebar_li}>
+                        <NavLink to={`/menu/${fetchedData[1].categoryID}`} activeClassName={styles.activeClassName}>
+                            <div><h4>{fetchedData[1].category}</h4></div>
+                        </NavLink>
+                    </li>
+                    <li className={styles.menu_sidebar_li}>
+                        <NavLink to={`/menu/${fetchedData[2].categoryID}`} activeClassName={styles.activeClassName}>
+                            <div><h4>{fetchedData[2].category}</h4></div>
+                        </NavLink>
+                    </li>
+                    <li className={styles.menu_sidebar_li}>
+                        <NavLink to={`/menu/${fetchedData[3].categoryID}`} activeClassName={styles.activeClassName}>
+                            <div><h4>{fetchedData[3].category}</h4></div>
+                        </NavLink>
+                    </li>
+                    <li className={styles.menu_sidebar_li}>
+                        <NavLink to={`/menu/${fetchedData[4].categoryID}`} activeClassName={styles.activeClassName}>
+                            <div><h4>{fetchedData[4].category}</h4></div>
+                        </NavLink>
+                    </li>
+                    <li className={styles.menu_sidebar_li}>
+                        <NavLink to={`/menu/${fetchedData[5].categoryID}`} activeClassName={styles.activeClassName}>
+                            <div><h4>{fetchedData[5].category}</h4></div>
+                        </NavLink>
+                    </li>
+                    <li className={styles.menu_sidebar_li}>
+                        <NavLink to={`/menu/${fetchedData[6].categoryID}`} activeClassName={styles.activeClassName}>
+                            <div><h4>{fetchedData[6].category}</h4></div>
+                        </NavLink>
+                    </li>
+                    <li className={styles.menu_sidebar_li} >
+                        <NavLink to={`/menu/${fetchedData[7].categoryID}`} activeClassName={styles.activeClassName}>
+                            <div><h4>{fetchedData[7].category}</h4></div>
+                        </NavLink>
+                    </li>
+                </ul>
+            </div>
+            <div className={styles.menuList}>
+                <Switch>
+                    <Route 
+                        path="/menu/content" 
+                        exact
+                        render={() => <MenuList menuList={fetchedData}/>}/>
+
+                    <Route path={`/menu/${fetchedData[0].categoryID}`} exact component={Soup}/>
+                    <Route path={`/menu/${fetchedData[1].categoryID}`} exact component={Poultry}/>
+                    <Route path={`/menu/${fetchedData[2].categoryID}`} exact component={Pork}/>
+                    <Route path={`/menu/${fetchedData[3].categoryID}`} exact component={Beef}/>
+                    <Route path={`/menu/${fetchedData[4].categoryID}`} exact component={Seafood}/>
+                    <Route path={`/menu/${fetchedData[5].categoryID}`} exact component={FriedRice}/>
+                    <Route path={`/menu/${fetchedData[6].categoryID}`} exact component={Vegetable}/>
+                    <Route path={`/menu/${fetchedData[7].categoryID}`} exact component={Beverages}/>
+                    <Route 
+                        path={`/menu/:categoryID/:slug`}
+                        exact
+                        render={({match}) => (
+                            <DishDetail slug={match.params.slug}
+                                        dishes={fetchedData}
+                            />)}
+                    />
+
+                    
+                    <Redirect to="/menu/content" />
+                </Switch>
+            </div>
+
+        </div>
+      );
+    } else {
+      displayContent = <div>You have no data!</div>;
+    }
+
+ 
+    
+
+    return displayContent;
+}
+
+export default Menu;

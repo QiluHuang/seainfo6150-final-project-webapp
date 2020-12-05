@@ -1,0 +1,25 @@
+.container {
+    margin: 200px;
+    display: flex;
+}
+
+.text_container {
+    margin-left: 50px;
+    text-align: right;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    /* font-family: Georgia, 'Times New Roman', Times, serif; */
+}
+
+.name {
+    font-size: 2.5em;
+}
+
+.text {
+    color: rgb(65, 65, 65);
+}
+
+.price {
+    color: #426D49;
+    text-shadow: 2px 2px #272634;
+    font-size: 2.5em;
+}

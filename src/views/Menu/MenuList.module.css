@@ -1,0 +1,23 @@
+.menuList_wrapper {
+  /* text-align: center; */
+  width: 100%;
+}
+
+.title {
+  font-family: Bookman;
+  font-size: 1em;
+  text-align: center;
+  text-decoration: underline;
+}
+
+.menuList_container {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  /* list-style-type: none; */
+  /* padding: 10px; */
+  /* margin: 10px 10px 10px 10px; */
+  
+}
