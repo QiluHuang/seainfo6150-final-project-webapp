@@ -8,7 +8,7 @@ import Logo from "./components/Logo/Logo.jsx";
 import Home from './views/Home/Home.jsx';
 import Menu from './views/Menu/Menu.jsx';
 import About from "./views/About/About.jsx";
-import Error from "./Error/Error.jsx";
+import Error from "./components/Error/Error.jsx";
 import Cart from "./views/Cart/Cart";
 import Checkout from "./views/Checkout/Checkout";
 

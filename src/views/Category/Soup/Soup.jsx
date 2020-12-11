@@ -1,15 +1,16 @@
 import React, { useEffect, useState } from 'react';
+import styles from './Soup.module.css';
 import { Switch, Route, Link, useRouteMatch } from "react-router-dom";
 import DishDetail from '../../DishDetail/DishDetail';
-
+import CategoryListItem from '../CategoryListItem/CategoryListItem.jsx';
 
 
 
 const Soup = (props) => {
-    let { path, url } = useRouteMatch();
+    // console.log(props);
 
     let {categoryID} = props.match.params;
-    console.log("打印：" + categoryID);
+    // console.log("打印：" + categoryID);
 
 
     let [fetchedData, setFetchedData] = useState([]);
@@ -37,67 +38,34 @@ const Soup = (props) => {
   
     let displayContent;
   
-    console.log(fetchedData.length);
+    // console.log(fetchedData.length);
 
 
     if (fetchedData.length) {
   
       displayContent = (
-        <div>
-            <h1>  Dish List  </h1>
+        <div calssName={styles.container}>
+            <div className={styles.title}>
+                <h3>{fetchedData[0].category}</h3>
+            </div>
             <div>
-                <ul>
-                    {  
-                        fetchedData.map((dish, index) => (
+                <div className={styles.menuList_container}>
+                    {fetchedData.map((dish, index) => (
                             <li key={index}>
-                                <Link to={`/menu/${categoryID}/${dish.slug}`}>pic{/* <img src={dish.image._url}/> */}</Link>  
-                                <div>{dish.name}</div>
+                                    <CategoryListItem dish={dish} key={dish.slug} />
                             </li>
-                        ))
-                    }
-                </ul>
-                {/* <Switch> */}
-                    <Route 
-                        path={`/menu/${categoryID}/:slug`} 
-                        exact
-                        render={({match}) => (
-                        <DishDetail slug={match.params.slug}
-                                    dishes={fetchedData}
-                        />)}
-                        />
+                        ))}
+                </div>
             </div>
         </div>
       );
     } else {
-      displayContent = <div>Soup is coming soon</div>;
+      displayContent = <div>Soup is coming soon!</div>;
     }
     
-    let dishes = [
-        {id: 1, category: "Soup", title: "soup1", description: "???", price: "$9.99"},
-        {id: 2, category: "Soup", title: "soup2", description: "???", price: "$9.99"},
-        {id: 3, category: "Poultry", title: "poultry3", description: "???", price: "$9.99"},
-        {id: 4, category: "Poultry", title: "poultry4", description: "???", price: "$9.99"},
-        {id: 5, category: "Pork", title: "pork5", description: "???", price: "$9.99"},
-        {id: 6, category: "Pork", title: "pork6", description: "???", price: "$9.99"}
-    ]
- 
-
     return (
         <div>
             {displayContent}
-
-            {/* <ul>
-                {
-                   dishes.map((dish, index) => (
-                       <li key={index}>
-                           <Link to={`${url}/${dish.title}`}>{dish.title}</Link>
-                       </li>
-                   )) 
-                }
-            </ul>
-            <Route path={`${path}/:title`} component={DishDetail}/>
-                
-            This is Dish Page */}
         </div>
     );
 }
