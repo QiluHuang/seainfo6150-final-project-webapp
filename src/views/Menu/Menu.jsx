@@ -12,11 +12,14 @@ import Vegetable from '../Category/Vegetable/Vegetable.jsx';
 import Beverages from '../Category/Beverages/Beverages.jsx';
 import MenuList from './MenuList.jsx';
 import DishDetail from '../DishDetail/DishDetail.jsx';
+import CategoryList from '../Category/CategoryList/CategoryList';
 
 
 
 const Menu = () => {
     const [fetchedData, setFetchedData] = useState([]);
+    const [fetchedDishData, setFetchedDishData] = useState([]);
+
 
     useEffect(() => {
       const fetchData = async () => {
@@ -25,17 +28,27 @@ const Menu = () => {
         const responseJson = await response.json();
         setFetchedData(Object.values(responseJson));
       };
+      const fetchDishData = async () => {
+        // performs a GET request
+        const response = await fetch("https://demo1273150.mockable.io/dishes");
+        const responseJson = await response.json();
+        setFetchedDishData(Object.values(responseJson));
+      };
   
       if (!fetchedData.length) {
         fetchData();
       }
-    }, [fetchedData]);
+      if (!fetchedDishData.length) {
+        fetchDishData();
+      }
+    }, [fetchedData, fetchedDishData]);
   
     let displayContent;
   
-    if (fetchedData.length) {
-      console.log(typeof fetchedData);
-      console.log(fetchedData);
+    if (fetchedData.length && fetchedDishData.length) {
+    //   console.log(typeof fetchedData);
+    //   console.log(fetchedData);
+    //   console.log(fetchedDishData);
 
 
       displayContent = (
@@ -96,20 +109,29 @@ const Menu = () => {
                         exact
                         render={() => <MenuList menuList={fetchedData}/>}/>
 
-                    <Route path={`/menu/${fetchedData[0].categoryID}`} exact component={Soup}/>
+                    <Route 
+                        path={`/menu/:categoryID`} 
+                        exact 
+                        render={({match})=>(
+                            <CategoryList categoryID={match.params.categoryID} 
+                                          dishes={fetchedDishData}/> 
+                        )}
+                    />
+
+                    {/* <Route path={`/menu/${fetchedData[0].categoryID}`} exact component={Soup}/>
                     <Route path={`/menu/${fetchedData[1].categoryID}`} exact component={Poultry}/>
                     <Route path={`/menu/${fetchedData[2].categoryID}`} exact component={Pork}/>
                     <Route path={`/menu/${fetchedData[3].categoryID}`} exact component={Beef}/>
                     <Route path={`/menu/${fetchedData[4].categoryID}`} exact component={Seafood}/>
                     <Route path={`/menu/${fetchedData[5].categoryID}`} exact component={FriedRice}/>
                     <Route path={`/menu/${fetchedData[6].categoryID}`} exact component={Vegetable}/>
-                    <Route path={`/menu/${fetchedData[7].categoryID}`} exact component={Beverages}/>
+                    <Route path={`/menu/${fetchedData[7].categoryID}`} exact component={Beverages}/> */}
                     <Route 
                         path={`/menu/:categoryID/:slug`}
                         exact
                         render={({match}) => (
                             <DishDetail slug={match.params.slug}
-                                        dishes={fetchedData}
+                                        dishes={fetchedDishData}
                             />)}
                     />
 

@@ -1,5 +1,7 @@
 import React, { useState } from "react";
+import Button from "../../components/Buttons/Button/Button";
 import styles from './Checkout.module.css';
+import Reminder from "./Reminder";
 
 const Checkout = () => {
   const [submittedForm, setSubmittedForm] = useState();
@@ -13,7 +15,8 @@ const Checkout = () => {
     <div>
       {
         submittedForm ? (
-          <div>Your form entry was {submittedForm.get("myText")} and {submittedForm.get("myDropdown")}</div>
+          <Reminder text={submittedForm.get("myDropdown")}/>
+          // <div>Your form entry was {submittedForm.get("myText")} and {submittedForm.get("myDropdown")}</div>
         ) : (
           <form onSubmit={onSubmit}>
             <div>
@@ -52,15 +55,15 @@ const Checkout = () => {
                 <div><h4>We are care about your each meal. Please check the following information.</h4></div>
                 <li>
                   <input type="checkbox" id="check1" name="membership" value="true" />
-                  <label for="vehicle1"> I am membership. </label>
+                  <label htmlFor="vehicle1"> I am membership. </label>
                 </li>
                 <li>
                   <input type="checkbox" id="check2" name="spicy" value="true" />
-                  <label for="vehicle2"> I can eat spicy food. </label>
+                  <label htmlFor="vehicle2"> I can eat spicy food. </label>
                 </li>
                 <li>
                   <input type="checkbox" id="check3" name="allergy" value="true" />
-                  <label for="vehicle3"> I am allergic to certain ingredients. </label>
+                  <label htmlFor="vehicle3"> I am allergic to certain ingredients. </label>
                 </li>
             </ul>
 
@@ -70,7 +73,7 @@ const Checkout = () => {
             </div>
 
             <div>
-                <input type="submit" value="Submit" />
+                <input className={styles.button} type="submit" value="Submit" />
             </div>
           </form>
         )

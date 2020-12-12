@@ -1,11 +1,14 @@
 import React, { useState, useEffect } from "react";
 import { Switch, Route, Redirect, NavLink, Link, useRouteMatch } from "react-router-dom";
 import styles from './Cart.module.css';
+import PropTypes from "prop-types";
+
 
 import Button from "../../components/Buttons/Button/Button";
 import CartListItem from "./CartListItem.jsx";
 
 const Cart = () => {
+  // console.log(props);
 
     let [fetchedData, setFetchedData] = useState([]);
 
@@ -60,19 +63,24 @@ const Cart = () => {
                         <div><h4>Quantity</h4></div>
                         <div><h4>Price</h4></div>
                     </div>
-                    <ul></ul>
                     {displayContent}
                     <div className={styles.total_row}>
                         <div><h4>Total: </h4></div>
                         <div><h4>$88.00</h4></div>
                     </div>
-                    <Link to="/checkout">
+                    <div className={styles.button}>
+                      <Link to="/checkout">
                         <Button buttonText="Checkout"/>
-                    </Link>
+                      </Link>
+                    </div>
                 </div>
         </div>
 
   )
 }
+
+// Cart.propTypes = {
+//   dishes: PropTypes.array.isRequired,
+// };
 
 export default Cart;

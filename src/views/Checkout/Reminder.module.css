@@ -1,0 +1,5 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    background-image: url("https://cdn11.bigcommerce.com/s-7j8u58/images/stencil/1110x1110/uploaded_images/miami-healthy-meals-delivery-service-the-best-way-to-time-your-meals-for-weight-loss.jpg?t=1561061586") no-repeat;
+}

@@ -67,4 +67,8 @@
     justify-content: flex-end;
 }
 
+.button {
+  float: right;
+}
+
 

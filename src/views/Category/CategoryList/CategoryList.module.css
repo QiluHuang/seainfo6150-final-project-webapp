@@ -1,0 +1,17 @@
+
+  
+.title {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 1.5em;
+    text-align: center;
+    text-decoration: underline;
+}
+  
+.menuList_container {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 10px;
+      font-family: Georgia, 'Times New Roman', Times, serif;
+      list-style-type: none;
+      padding: 10px;
+}

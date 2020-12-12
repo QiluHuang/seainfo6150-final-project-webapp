@@ -47,8 +47,8 @@ const Slider = () => {
             {/* <button className={styles.goLeft} onClick={goLeft}><FontAwesomeIcon icon={faChevronLeft} /></button>
             <button className={styles.goRight} onClick={goRight}><FontAwesomeIcon icon={faChevronRight}/></button> */}
 
-            <button className={styles.goLeft} onClick={goLeft}><i class="fas fa-chevron-left fa-5x" ></i></button>
-            <button className={styles.goRight} onClick={goRight}><i class="fas fa-chevron-right fa-5x" ></i></button>
+            <button className={styles.goLeft} onClick={goLeft}><i className="fas fa-chevron-left fa-5x" ></i></button>
+            <button className={styles.goRight} onClick={goRight}><i className="fas fa-chevron-right fa-5x" ></i></button>
 
         </div>
     );

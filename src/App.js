@@ -38,14 +38,14 @@ function App() {
                 <li className="topnav_li"><Link to="/">Home</Link></li>
                 <li className="topnav_li"><Link to="/menu">Menu</Link></li>
                 <li className="topnav_li"><Link to="/about">About</Link></li>
-                <li className="topnav_right"><Link to="/cart"><i class="fa fa-shopping-cart" aria-hidden="true"></i> Cart</Link></li>
+                <li className="topnav_right"><Link to="/cart"><i className="fa fa-shopping-cart" aria-hidden="true"></i> Cart</Link></li>
             </ul>
             
 
 
           </div>
       </header>
-      <body className="body">
+      <div className="body">
         <Switch>
           <Route path="/" exact component={Home} />
           <Route path="/menu" component={Menu} />
@@ -57,7 +57,7 @@ function App() {
               
           <Route component={Error} />
         </Switch>
-      </body>
+      </div>
 
 
 
