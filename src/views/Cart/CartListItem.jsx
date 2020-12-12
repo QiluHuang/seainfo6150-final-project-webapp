@@ -6,19 +6,17 @@ import styles from "./CartListItem.module.css";
 import DishImageMedium from "../../components/Images/DishImageMedium/DishImageMedium.jsx";
 
 const CartListItem = (props) => {
-    console.log(props);
+    // console.log(props);
   return (
       <div className={styles.container}>
           <div className={styles.wrapper}>
-               
-                    
-                        <div className = {styles.upper_image}>
-                            <DishImageMedium url={props.dish.image._url} title={props.dish.name}/>
-                        </div>
-                        <div><h4 className={styles.name}>{props.dish.name}</h4></div>
-                        <div><h4 className={styles.quantity}>1</h4></div>
-                        <div><h4 className={styles.price}>{props.dish.price}</h4></div> 
-                    
+              <div className={styles.upper_image}>
+                  <DishImageMedium url={props.dish.image._url} title={props.dish.name}/>
+              </div>
+              <div className={styles.dishName}>{props.dish.name}</div>
+              <div className={styles.quantity}>1</div>
+              <div className={styles.price}>{props.dish.price}</div> 
+          
                  
                                    
           </div>

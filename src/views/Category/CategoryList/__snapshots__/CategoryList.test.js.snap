@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CategoryList tests renders correctly 1`] = `
+<div>
+  <div
+    class="container"
+  >
+    <div
+      class="title"
+    >
+      <h3 />
+    </div>
+    <div>
+      <div
+        class="menuList_container"
+      />
+    </div>
+    <div />
+  </div>
+</div>
+`;

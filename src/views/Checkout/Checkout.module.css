@@ -1,3 +1,50 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  margin-top: 5%;
+  margin-left: 20%;
+  margin-right: 20%;
+}
+
+.wrapper {
+  margin: 10px;
+}
+
+
+.labelText {
+  display: inline-block;
+	text-align: justify;
+	vertical-align: middle;
+  width: 300px;
+  font-size: 20px;
+  font-weight: 700;
+  color: #329735;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1em;
+}
+
+.check {
+  border-style: solid;
+  /* border: 10px; */
+  border-color: #329735;
+  border-radius: 15px;
+  box-shadow: 5px 5px #888888;
+  margin: 20px;
+}
+
+.sentence {
+  font-size: 20px;
+  font-weight: 700;
+  color: black;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1em;
+  text-decoration: underline;
+}
+
+.buttonWrapper {
+  margin-top: 20px;
+}
+
 .button {
     background-color: #329735;
     border: none;

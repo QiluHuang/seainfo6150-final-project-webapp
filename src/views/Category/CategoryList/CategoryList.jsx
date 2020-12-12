@@ -9,7 +9,7 @@ import CategoryListItem from '../CategoryListItem/CategoryListItem.jsx';
 const CategoryList = (props) => {
     var cateID=props.categoryID;
 
-    // console.log("props: " + props);
+    console.log("props: " + props);
 
     return (
         <div className={styles.container}>

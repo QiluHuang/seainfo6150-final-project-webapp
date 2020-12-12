@@ -34,7 +34,7 @@
 
 
 .name {
-    font-size: 1em;
+    font-size: 1.6em;
     text-align: center;
     color: black;
 }
@@ -42,7 +42,7 @@
 
   
 .text {
-    font-size: 0.7em;
+    font-size: 1.1em;
     margin-left: 10px;
     margin-right: 10px;
 }
@@ -62,4 +62,24 @@
   margin: 10px;
 }
 
+
+@media (max-width: 768px) {
+  .name {
+    font-size: 1.3em;
+  }
+
+  .text {
+    font-size: 1em;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1390px) {
+  .name {
+    font-size: 1.4em;
+  }
+
+  .text {
+    font-size: 1em;
+  }
+}
 

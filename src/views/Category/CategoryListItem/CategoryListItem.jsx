@@ -6,7 +6,6 @@ import styles from "./CategoryListItem.module.css";
 // import ArticleTextToggleButton from "../ArticleTextToggleButton/ArticleTextToggleButton.jsx";
 import DishImageMedium from "../../../components/Images/DishImageMedium/DishImageMedium.jsx";
 import AddButton from '../../../components/Buttons/Button/Button.jsx';
-import PlusMinusButton from '../../../components/Buttons/PlusMinusButton/PlusMinusButton.jsx';
 import Cart from "../../Cart/Cart";
 
 const DishListItem = (props) => {
@@ -21,13 +20,14 @@ const DishListItem = (props) => {
     }
 
     console.log(props);
+    console.log(typeof props);
     return (
         <div className={styles.container}>
             <div className={styles.wrapper}>
                 <div>
                         <Link to={`/menu/${props.dish.categoryID}/${props.dish.slug}`}>
                             <div className = {styles.upper_image}>
-                                <DishImageMedium url={props.dish.image._url} title={props.dish.name}/>
+                                <DishImageMedium url={props.dish.image.url} title={props.dish.name}/>
                             </div>
                             <div><h4 className={styles.name}>{props.dish.name}</h4></div>
                         </Link> 
@@ -48,7 +48,6 @@ const DishListItem = (props) => {
 };
 
 DishListItem.propTypes = {
-  dishes: PropTypes.object.isRequired,
-  onClick: PropTypes.func.isRequired
+  dish: PropTypes.object.isRequired,
 };
 export default DishListItem;

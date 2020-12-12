@@ -1,0 +1,47 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CategoryListItem tests renders the CategoryListItem component correctly 1`] = `
+<div>
+  <div
+    class="container"
+  >
+    <div
+      class="wrapper"
+    >
+      <div>
+        <a
+          href="/menu/undefined/undefined"
+        >
+          <div
+            class="upper_image"
+          />
+          <div>
+            <h4
+              class="name"
+            />
+          </div>
+        </a>
+      </div>
+      <div>
+        <h5
+          class="text"
+        />
+      </div>
+      <div>
+        <h4
+          class="price"
+        />
+      </div>
+      <div
+        class="button"
+      >
+        <button
+          class="button"
+        >
+          Add
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+`;

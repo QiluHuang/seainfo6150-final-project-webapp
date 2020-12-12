@@ -31,7 +31,7 @@ const DishDetail = (props) => {
             {/* <h1>This is DishDetail page</h1> */}
             
             <div>
-                <DishImageLarge url={dish.image._url} />
+                <DishImageLarge url={dish.image.url} />
             </div>
             <div className={styles.text_container}>
                 <h1 className={styles.name}>{dish.name}</h1>

@@ -1,12 +1,67 @@
+.container {
+    font-family: Arial, Helvetica, sans-serif;
+    vertical-align: middle;
+}
+
 .wrapper {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    vertical-align: middle;
+    /* justify-content: space-between; */
 }
 
 .upper_image {
-    width: 200px;
+    margin-left: 100px;
+    width: 25%;
+}
+
+.dishName {
+    width: 38%;
+    font-size: 1.2em;
+}
+
+.quantity {
+    width: 22%;
+    font-size: 1.2em;
+}
+
+.price {
+    /* width: 10% */
+    font-size: 1.2em;
+}
+
+
+.upper_image {
+    /* width: 200px; */
     height: auto;
     text-align: center;
     padding: 10px;
 }
+
+
+
+
+
+
+@media (max-width: 768px) {
+    .upper_image {
+        display: none;
+    }
+
+    .dishName {
+        width: 70%;
+        font-size: 1em;
+    }
+
+    .quantity {
+        width: 25%;
+        font-size: 1em;
+
+    }
+  }
+  
+  @media (min-width: 768px) and (max-width: 1390px) {
+    .dishName {
+        width: 30%;
+    }
+  }

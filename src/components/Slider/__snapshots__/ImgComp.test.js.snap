@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ImgComp tests renders the ImgComp component correctly 1`] = `
+<div>
+  <div
+    class="imgContainer"
+  >
+    <img
+      alt="slide-img"
+      class="image"
+      src="barbecue-pork-fried-rice.jpg"
+    />
+  </div>
+</div>
+`;

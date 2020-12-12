@@ -20,14 +20,6 @@ const MenuList = (props) => {
                     <MenuListItem dish={dish} key={dish.slug} />
                 ))}
             </div>
-            {/* <ul className={styles.container}>
-                {props.menuList.map((menuItem, index) =>  (
-                    <li key={index}>
-                        <Link to={`/menu/${menuItem.categoryID}`}>pic</Link>  
-                        <div>{menuItem.category}</div>
-                    </li>
-                ))}
-            </ul> */}
         </div>
     );
 }

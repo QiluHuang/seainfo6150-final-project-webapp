@@ -15,3 +15,15 @@
       list-style-type: none;
       padding: 10px;
 }
+
+@media (max-width: 768px) {
+    .menuList_container {
+        grid-template-columns: repeat(2, 1fr);
+  }
+}
+  
+  @media (min-width: 768px) and (max-width: 1390px) {
+    .menuList_container {
+        grid-template-columns: repeat(3, 1fr);
+  }
+}

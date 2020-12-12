@@ -2,14 +2,6 @@ import React, { useEffect, useState } from 'react';
 import { Switch, Route, Link, NavLink, useRouteMatch, Redirect } from "react-router-dom";
 import styles from './Menu.module.css';
 
-import Poultry from '../Category/Poultry/Poultry.jsx';
-import Pork from '../Category/Pork/Pork.jsx';
-import Soup from '../Category/Soup/Soup.jsx';
-import Beef from '../Category/Beef/Beef.jsx';
-import Seafood from '../Category/Seafood/Seafood.jsx';
-import FriedRice from '../Category/FriedRice/FriedRice.jsx';
-import Vegetable from '../Category/Vegetable/Vegetable.jsx';
-import Beverages from '../Category/Beverages/Beverages.jsx';
 import MenuList from './MenuList.jsx';
 import DishDetail from '../DishDetail/DishDetail.jsx';
 import CategoryList from '../Category/CategoryList/CategoryList';
@@ -118,14 +110,6 @@ const Menu = () => {
                         )}
                     />
 
-                    {/* <Route path={`/menu/${fetchedData[0].categoryID}`} exact component={Soup}/>
-                    <Route path={`/menu/${fetchedData[1].categoryID}`} exact component={Poultry}/>
-                    <Route path={`/menu/${fetchedData[2].categoryID}`} exact component={Pork}/>
-                    <Route path={`/menu/${fetchedData[3].categoryID}`} exact component={Beef}/>
-                    <Route path={`/menu/${fetchedData[4].categoryID}`} exact component={Seafood}/>
-                    <Route path={`/menu/${fetchedData[5].categoryID}`} exact component={FriedRice}/>
-                    <Route path={`/menu/${fetchedData[6].categoryID}`} exact component={Vegetable}/>
-                    <Route path={`/menu/${fetchedData[7].categoryID}`} exact component={Beverages}/> */}
                     <Route 
                         path={`/menu/:categoryID/:slug`}
                         exact

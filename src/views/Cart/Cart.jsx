@@ -28,22 +28,18 @@ const Cart = () => {
     
       let displayContent;
     
-      console.log(fetchedData);
+      // console.log(fetchedData);
   
   
       if (fetchedData.length) {
     
         displayContent = (
-          <div calssName={styles.container}>
-              
+          <div className={styles.container}>
               <div>
-                  <ul className={styles.menuList_container}>
+                  <ul className={styles.castList_container}>
                       {fetchedData.map((dish, index) => (
-                              
-                              <li key={index}>
-                                  {/* <Link to={`/menu/pork/${dish.slug}`}> */}
+                              <li className={styles.list_row} key={index}>
                                       <CartListItem dish={dish} key={dish.slug} />
-                                  {/* </Link>   */}
                               </li>
                           ))}
                   </ul>
@@ -58,13 +54,13 @@ const Cart = () => {
         <div>
                 <div className={styles.cart_container}>
                     <div className={styles.title_row}>
-                        <div><h4>Index</h4></div>
-                        <div><h4>Name</h4></div>
-                        <div><h4>Quantity</h4></div>
-                        <div><h4>Price</h4></div>
+                        <div className={styles.index}><h4>Index</h4></div>
+                        <div className={styles.dishName}><h4>Name</h4></div>
+                        <div className={styles.quantity}><h4>Quantity</h4></div>
+                        <div className={styles.price}><h4>Price</h4></div>
                     </div>
                     {displayContent}
-                    <div className={styles.total_row}>
+                    <div className={styles.bottom_row}>
                         <div><h4>Total: </h4></div>
                         <div><h4>$88.00</h4></div>
                     </div>
