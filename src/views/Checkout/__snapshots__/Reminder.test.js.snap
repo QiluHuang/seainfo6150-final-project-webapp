@@ -1,0 +1,28 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Reminder tests renders the Reminder component correctly 1`] = `
+<div>
+  <div
+    class="container"
+  >
+    <div
+      class="image"
+    >
+      <img
+        alt="background"
+        src="https://cdn11.bigcommerce.com/s-7j8u58/images/stencil/1110x1110/uploaded_images/miami-healthy-meals-delivery-service-the-best-way-to-time-your-meals-for-weight-loss.jpg?t=1561061586"
+      />
+    </div>
+    <div
+      class="background"
+    >
+      <div
+        class="text"
+      >
+        Please get your meal at 
+        10:30PM
+      </div>
+    </div>
+  </div>
+</div>
+`;

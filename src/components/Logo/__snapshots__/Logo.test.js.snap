@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Logo tests renders the logo component correctly 1`] = `
+<div>
+  <img
+    alt="Uncle Wong Logo"
+    class="logo"
+    src="uncle-wong-logo.gif"
+  />
+</div>
+`;

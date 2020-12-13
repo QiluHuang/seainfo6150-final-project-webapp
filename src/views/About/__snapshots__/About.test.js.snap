@@ -1,0 +1,94 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`About tests renders the About component correctly 1`] = `
+<div>
+  <div
+    class="container"
+  >
+    <div
+      clasname="info"
+    >
+      <div
+        class="wrapper"
+      >
+        <div
+          class="title"
+        >
+          Address
+        </div>
+        <div
+          class="text"
+        >
+          11760 San Pablo Ave CEl Cerrito, CA 94530
+        </div>
+      </div>
+      <div
+        class="wrapper"
+      >
+        <div
+          class="title"
+        >
+          Phone
+        </div>
+        <div
+          class="text"
+        >
+          (510) 236-9999
+        </div>
+      </div>
+      <div
+        class="wrapper"
+      >
+        <div
+          class="title"
+        >
+          Store Hours
+        </div>
+        <div
+          class="text"
+        >
+          <ul>
+            <li>
+              Mon: 11:30 AM - 09:00 PM
+            </li>
+            <li>
+              Tue: Closed
+            </li>
+            <li>
+              Wed - Thurs: 11:30 AM - 09:00 PM
+            </li>
+            <li>
+              Fri - Sat: 11:30 AM - 09:30 PM
+            </li>
+            <li>
+              Sun: 11:30 AM - 09:00 PM
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div
+      clasname="image_wrapper"
+    >
+      <div
+        class="img"
+      >
+        <img
+          alt="chineseFood1"
+          class="img"
+          src="https://d.newsweek.com/en/full/1552244/variety-chinese-food.jpg"
+        />
+      </div>
+      <div
+        class="img"
+      >
+        <img
+          alt="chineseFood2"
+          class="img"
+          src="https://nitrocdn.com/QJsLnWfsWAiuukSIMowyVEHtotvSQZoR/assets/static/source/rev-d5d1d02/sites/default/files/styles/body_images_sm_1x/public/media/healthy-kung-pao-chicken-1.jpg"
+        />
+      </div>
+    </div>
+  </div>
+</div>
+`;

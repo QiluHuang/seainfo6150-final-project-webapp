@@ -20,10 +20,44 @@
 }
 
 
+
+
+
 .text {
     font-family: Arial, Helvetica, sans-serif;
 }
 
 .image_wrapper {
     overflow: auto;
+}
+
+
+
+@media (max-width: 768px) {
+    .container {
+        margin-top: 5%;
+        display: flex;
+        flex-direction: column;
+        transition-duration: 1s;
+
+    }
+
+    .wrapper {       
+        font-size: 0.8em;
+    }
+
+    .img {
+        margin-left: 30%;
+    }
+}
+  
+  @media (min-width: 768px) and (max-width: 1390px) {
+    .wrapper {       
+        font-size: 1em;
+    }
+
+    .image_wrapper {
+        transition-duration: 1s;
+        margin-top: 10%;
+    }
 }

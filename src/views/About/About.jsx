@@ -11,7 +11,7 @@ const About = () => {
 
     return (
         <div className={styles.container}>
-          <div clasName={styles.info}>
+          <div className={styles.info}>
             <div className={styles.wrapper}>
               <div className={styles.title}>Address</div>
               <div className={styles.text}>11760 San Pablo Ave CEl Cerrito, CA 94530</div>
@@ -34,9 +34,9 @@ const About = () => {
             </div>
           </div>
 
-          <div clasName={styles.image_wrapper}>
-            <div><DishImageLarge url={imgUrl[0]} title={"chineseFood1"}/></div>
-            <div><DishImageLarge url={imgUrl[1]} title={"chineseFood2"}/></div>
+          <div className={styles.image_wrapper}>
+            <div className={styles.img}><DishImageLarge url={imgUrl[0]} title={"chineseFood1"}/></div>
+            <div className={styles.img}><DishImageLarge url={imgUrl[1]} title={"chineseFood2"}/></div>
             {/* <div><DishImageLarge url={imgUrl[2]} title={"chineseFood3"}/></div> */}
           </div>
         </div>

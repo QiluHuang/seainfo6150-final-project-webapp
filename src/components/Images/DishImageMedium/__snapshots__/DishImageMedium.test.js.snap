@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`DishImageMedium tests renders the DishImageMedium component correctly 1`] = `
+<div>
+  <div>
+    <img
+      alt="soup"
+      class="img"
+      src="https://d.newsweek.com/en/full/1552244/variety-chinese-food.jpg"
+    />
+  </div>
+</div>
+`;

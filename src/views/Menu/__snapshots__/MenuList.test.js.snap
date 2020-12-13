@@ -1,0 +1,49 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`MenuList tests renders correctly 1`] = `
+<div>
+  <div
+    class="menuList_wrapper"
+  >
+    <div
+      class="title"
+    >
+      <h3>
+         MENU 
+      </h3>
+    </div>
+    <div
+      class="menuList_container"
+    >
+      <div
+        class="container"
+      >
+        <a
+          href="/menu/soup"
+        >
+          <div
+            class="wrapper"
+          >
+            <div
+              class="upper_image"
+            >
+              <div>
+                <img
+                  alt="Chicken With Sweet Cream Corn Soup"
+                  class="img"
+                  src="https://imageresizer.static9.net.au/4X0xzcYzOVZeMKP7lsvoNmdEHz4=/1274x717/smart/https%3A%2F%2Fprod.static9.net.au%2F_%2Fmedia%2FImages%2FKitchen%2F2011%2F09%2F22%2F11%2F34%2Fchickensoup.jpg"
+                />
+              </div>
+            </div>
+            <h5
+              class="name"
+            >
+              Soup
+            </h5>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+`;
