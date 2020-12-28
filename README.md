@@ -2,7 +2,7 @@
 
 Link to final project assignment: https://northeastern.instructure.com/courses/23067/assignments/23113
 
-Published at: https://qiluhuang.github.io/seainfo6150-final-project-webapp/
+<br>Published at: https://qiluhuang.github.io/seainfo6150-final-project-webapp/
 
 <hr>
 
